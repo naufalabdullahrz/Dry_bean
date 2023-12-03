@@ -49,23 +49,9 @@ if st.button("submit"):
     #Prediksi dengan model
     data = [Area, Perimeter, MajorAxisLength, Eccentricity, ConvexArea, EquivDiameter, Extent, Compactness, ShapeFactor1, ShapeFactor2, ShapeFactor3]
     random_forest_predictions = random_forest_model.predict([data])
-
-    
-
-    # Normalisasi data menggunakan fungsi normalisasi yang telah ditambahkan
-    
-
-    # Melakukan prediksi dengan model SVM
     
 
     # Menampilkan hasil prediksi
     st.header('Hasil Prediksi')
-    st.write(f'Model SVM memprediksi kelas: {random_forest_predictions}')
+    st.write(f'Model RF memprediksi kelas: {random_forest_predictions}')
 
-
-# with st.sidebar:
-#     st.write('Link:')
-#     link = '[GitHub](https://github.com/Revichi/appdataset)'
-#     st.markdown(link, unsafe_allow_html=True)
-#     link = '[Jupyter Book](https://revichi.github.io/datamining/App.html?highlight=penambangan)'
-#     st.markdown(link, unsafe_allow_html=True)
