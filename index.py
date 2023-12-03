@@ -1,15 +1,9 @@
 import streamlit as st
-import numpy as np
-import aksi
-import time
-import webbrowser
 import pandas as pd
-import joblib
-# Memuat model SVM dari file .pkl
-# rf_model_path = open('Model\saved_data.joblib','rb')
-# svm_model = joblib.load(rf_model_path)
+from sklearn.feature_selection import SelectKBest, f_classif
+from sklearn.preprocessing import MinMaxScaler
 
-    
+
 
 st.title('Tools')
 st.write("""
@@ -30,12 +24,6 @@ ShapeFactor3 = st.number_input("ShapeFactor3", format="%.5f")
 
 
 if st.button("submit"):
-    import matplotlib.pyplot as plt
-    import pandas as pd
-    import numpy as np
-    from sklearn.feature_selection import SelectKBest, f_classif
-    from sklearn.preprocessing import MinMaxScaler
-    import pandas as pd
 
     # Memuat file CSV
     df = pd.read_excel('Model\Dry_Bean_Dataset.xlsx')
