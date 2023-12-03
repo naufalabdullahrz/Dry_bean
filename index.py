@@ -26,7 +26,7 @@ ShapeFactor3 = st.number_input("ShapeFactor3", format="%.5f")
 if st.button("submit"):
 
     # Memuat file CSV
-    df = pd.read_excel('.\Model\Dry_Bean_Dataset.xlsx')
+    df = pd.read_excel('Dry_Bean_Dataset.xlsx')
     X = df.drop(['Class'], axis=1)
     y = df["Class"]
     X = df.drop(['MinorAxisLength','AspectRation','Solidity','roundness','ShapeFactor4','Class'], axis=1)
